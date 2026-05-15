@@ -6,7 +6,7 @@ enum class SystemOperation(val commandKey: String) {
 
     companion object {
         fun isHelp(command: String): Boolean =
-         HELP.commandKey == command
+            command == HELP.commandKey || command == "help"
 
 
         fun shouldExitApplication(command: String): Boolean =
